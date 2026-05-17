@@ -1,32 +1,30 @@
 # Experimentation Backlog Science Lab
 
-I built this because marketing analytics analytics needs more than a dashboard. It needs a clear operating artifact that connects hypotheses, clean data pipelines, regression checks, and recommendations into recommendations a stakeholder can inspect and challenge.
+I built this because marketing experimentation science needs an artifact that connects source data, analysis, and recommendations, not just a polished dashboard screenshot.
 
-![Experimentation Backlog Science Lab dashboard](docs/images/dashboard.png)
+![Experimentation Backlog Science Lab](docs/images/dashboard.png)
 
-## Why this exists
+## What this project is
 
-Teams need a practical way to evaluate hypotheses, clean data pipelines, regression checks, and recommendations without losing the business context behind each metric.
+This is a lab artifact for marketing experimentation science. It uses synthetic but workflow-shaped data to rank experiment-level risks and convert the output into stakeholder-ready recommendations.
 
-## What the data says
+## Data sources
 
-The synthetic data shows marketing analytics decisions improve when teams inspect metric quality before acting on headline performance.
+- `entities.csv` - 32 experiment records
+- `daily_metrics.csv` - 3,840 daily operating rows
+- `source_events.csv` - 650 event and exception records
+- `recommended_actions.csv` - 180 action candidates
 
-The largest risks come from owner gaps, unclear definitions, and workflows that still depend on manual reporting.
+## Analysis outputs
 
-The best next move is to convert repeated stakeholder questions into governed views with documented assumptions.
+- `analysis/executive_findings.md`
+- `analysis/analysis_plan.md`
+- `analysis/sql_checks.sql`
+- `analysis/outputs/priority_queue.csv`
 
-## Outputs
+## Recommendation
 
-- Executive pulse: KPI cards summarize the current operating picture.
-- Diagnostic table: ranked signals show where action is needed.
-- Analytical recommendations: concise next moves translate analysis into stakeholder decisions.
-
-## Recommendations
-
-- Certify the core metrics before scaling more stakeholder dashboards.
-- Prioritize the highest-risk segments where performance and data-quality issues overlap.
-- Turn the recommendation memo into a recurring operating review artifact.
+Use the priority queue to focus stakeholder attention on the experiment segments where performance upside, measurement risk, and operational readiness overlap.
 
 ## Run locally
 
