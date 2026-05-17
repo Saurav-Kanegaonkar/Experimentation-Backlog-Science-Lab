@@ -1,0 +1,5 @@
+signal,owner,status,finding,risk
+"Primary signal","Business","Fresh","Strong opportunity","High"
+"Quality check","Analytics","Watch","Definition gap","High"
+"Workflow","Operations","Fresh","Automation candidate","Medium"
+"Readout","Leadership","Fresh","No issue","Low"
