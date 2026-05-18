@@ -1,0 +1,9 @@
+{
+  "seed": 81742,
+  "hypotheses_scored": 36,
+  "completed_experiments": 18,
+  "pipeline_quality_checks": 168,
+  "scale_recommendations": 8,
+  "statistical_method": "two-proportion z-test with coefficient-style percentage point lift",
+  "causal_design": "randomized A/B test with pre-period covariate adjustment framing"
+}

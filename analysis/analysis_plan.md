@@ -1,6 +1,7 @@
 # Analysis Plan
 
-1. Aggregate daily metrics at experiment grain.
-2. Join events and action candidates to find high-risk operating segments.
-3. Rank the queue by risk, quality, and estimated impact.
-4. Convert the top issues into stakeholder-ready recommendations.
+1. Translate client discovery themes into testable marketing hypotheses with primary KPIs and guardrails.
+2. Score each hypothesis by value pool, expected lift, confidence, effort, measurement risk, data quality, and minimum detectable effect.
+3. Read completed experiments with treatment-control conversion rates, relative lift, confidence intervals, p-values, and coefficient-style lift.
+4. Use pipeline quality checks to decide whether the result is ready for reporting, needs engineering remediation, or should remain a learning.
+5. Convert the statistical readout into stakeholder recommendations that explain the so what behind the result.

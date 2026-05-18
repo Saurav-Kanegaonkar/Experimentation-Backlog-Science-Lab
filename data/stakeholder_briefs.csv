@@ -1,0 +1,4 @@
+brief_id,audience,headline,recommendation,supporting_metric
+BRF-001,Client executive sponsor,"8 experiments are ready to scale, with 3 needing one more readout before investment.",Approve rollout for statistically clear winners and keep directional tests in the next sprint until confidence improves.,"8 scale decisions, 3 validate decisions"
+BRF-002,Marketing analytics lead,5 backlog items should stay out of reporting until instrumentation is repaired.,"Partner with engineering on schema, duplicate event, and late event checks before using these hypotheses in recurring reporting.",91.1 average pipeline readiness score
+BRF-003,Experimentation program owner,"HYP-015 is the strongest next test because value, confidence, and measurable effect size line up.","Move the top ranked hypothesis into an optimization brief with KPI, guardrail, sample size, and launch criteria already attached.",40.0 priority score

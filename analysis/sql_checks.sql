@@ -1,17 +1,38 @@
--- Priority queue foundation
+-- Experiment backlog readiness, written in warehouse-friendly SQL
 select
-  entity_id,
-  avg(risk_score) as avg_risk_score,
-  avg(quality_score) as avg_quality_score,
-  sum(revenue_or_value) as value_pool
-from daily_metrics
-group by 1
-order by avg_risk_score desc;
+  hypothesis_id,
+  client_vertical,
+  primary_kpi,
+  guardrail_metric,
+  expected_lift_pct,
+  mde_pct,
+  priority_score,
+  backlog_status
+from hypothesis_backlog
+where data_quality_score >= 75
+  and measurement_risk <= 35
+order by priority_score desc;
 
--- Action readiness
+-- Treatment-control readout QA
 select
-  action_type,
-  avg(expected_lift_pct) as expected_lift,
-  avg(effort_hours) as effort_hours
-from recommended_actions
-group by 1;
+  experiment_id,
+  hypothesis_id,
+  relative_lift_pct,
+  coefficient_lift_pp,
+  p_value,
+  decision
+from experiment_results
+where control_n >= 9000
+  and variant_n >= 9000
+order by p_value asc;
+
+-- Source reliability gate before client reporting
+select
+  source_system,
+  avg(completeness_rate) as avg_completeness_rate,
+  avg(duplicate_rate) as avg_duplicate_rate,
+  avg(late_event_rate) as avg_late_event_rate,
+  avg(pipeline_readiness_score) as avg_pipeline_readiness_score
+from pipeline_quality
+group by 1
+having avg(pipeline_readiness_score) >= 82;

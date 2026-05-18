@@ -1,6 +1,7 @@
 {
   "scripts": {
     "start": "python3 -m http.server 4173",
-    "analyze": "python3 scripts/score_operating_data.py"
+    "generate": "python3 scripts/generate_experimentation_lab.py",
+    "analyze": "python3 scripts/generate_experimentation_lab.py"
   }
 }

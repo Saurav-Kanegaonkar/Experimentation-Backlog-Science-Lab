@@ -5,48 +5,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Experimentation Backlog Science Lab</title>
   <link rel="stylesheet" href="src/styles.css">
-<style>:root{--bg:#fff7ed;--accent:#f97316;--ink:#0f172a}</style></head>
+</head>
 <body>
   <main class="shell">
-    <header class="hero">
-      <p>marketing experimentation science</p>
-      <h1>Experimentation Backlog Science Lab</h1>
-      <span>Decision artifact for marketing experimentation science: source-style data, ranked analysis, and recommendations built around experiment-level operating signals.</span>
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">Marketing experimentation science</p>
+        <h1>Experimentation Backlog Science Lab</h1>
+        <p class="lede">A decision artifact for turning client discovery, source quality, and statistical readouts into an evidence-based optimization backlog.</p>
+      </div>
+      <aside class="brief-card" aria-label="Current recommendation">
+        <span>Client-ready call</span>
+        <strong id="heroDecision">Loading</strong>
+        <p id="heroSupport">Preparing statistical and quality signals.</p>
+      </aside>
     </header>
-    <section class="metrics">
-      <article><small>Source rows</small><strong>4.2K+</strong><em>modeled</em></article>
-      <article><small>Risk queue</small><strong>25</strong><em>ranked</em></article>
-      <article><small>Prep saved</small><strong>6 hrs</strong><em>weekly</em></article>
-      <article><small>Decision lanes</small><strong>3</strong><em>ready</em></article>
+
+    <section class="metric-strip" id="summaryMetrics" aria-label="Summary metrics"></section>
+
+    <nav class="surface-tabs" aria-label="Artifact surfaces">
+      <button type="button" class="active" data-tab="backlog">Backlog</button>
+      <button type="button" data-tab="readout">Readout Lab</button>
+      <button type="button" data-tab="quality">Quality Brief</button>
+    </nav>
+
+    <section class="surface active" id="backlog" aria-labelledby="backlog-title">
+      <div class="surface-header">
+        <div>
+          <p class="eyebrow">Hypothesis development</p>
+          <h2 id="backlog-title">Ranked experimentation backlog</h2>
+        </div>
+        <p>Priority combines value, expected lift, minimum detectable effect, confidence, effort, data quality, and measurement risk.</p>
+      </div>
+      <div class="split">
+        <section class="panel">
+          <div class="panel-title">
+            <h3>Highest value tests</h3>
+            <span id="readyCount"></span>
+          </div>
+          <div class="table-wrap">
+            <table id="backlogTable"></table>
+          </div>
+        </section>
+        <section class="panel accent-panel">
+          <h3>Briefing notes</h3>
+          <div id="backlogNotes" class="note-stack"></div>
+        </section>
+      </div>
     </section>
-    <section class="grid">
-      <article class="panel">
-        <p class="kicker">Analytical queue</p>
-        <h2>Highest priority experiment signals</h2>
-        <table>
-          <thead><tr><th>Signal</th><th>Owner</th><th>Metric</th><th>Action</th></tr></thead>
-          <tbody>
-            <tr><td>Coverage risk</td><td>Ops</td><td>High</td><td>Escalate before review</td></tr>
-            <tr><td>Metric variance</td><td>Analytics</td><td>Watch</td><td>Validate source definition</td></tr>
-            <tr><td>Growth pocket</td><td>Business</td><td>Strong</td><td>Prioritize next sprint</td></tr>
-          </tbody>
-        </table>
-      </article>
-      <article class="panel memo">
-        <p class="kicker">Executive finding</p>
-        <h2>What the data says</h2>
-        <p>The strongest recommendations appear when performance, operational readiness, and measurement quality overlap.</p>
-        <p>The project turns repeated stakeholder questions into a ranked operating queue instead of another static KPI page.</p>
-      </article>
+
+    <section class="surface" id="readout" aria-labelledby="readout-title">
+      <div class="surface-header">
+        <div>
+          <p class="eyebrow">Statistical readout</p>
+          <h2 id="readout-title">Experiment results and so what</h2>
+        </div>
+        <p>Completed tests are translated into lift, confidence intervals, p-values, and business recommendations.</p>
+      </div>
+      <div class="split readout-layout">
+        <section class="panel">
+          <div class="panel-title">
+            <h3>Readout queue</h3>
+            <span id="scaleCount"></span>
+          </div>
+          <div class="table-wrap">
+            <table id="resultsTable"></table>
+          </div>
+        </section>
+        <section class="panel">
+          <h3>Coefficient story</h3>
+          <div id="coefficientStory" class="stat-story"></div>
+        </section>
+      </div>
     </section>
-    <section class="panel">
-      <p class="kicker">Recommendations</p>
-      <div class="recs">
-        <article><b>1</b><span>Prioritize high-value segments where risk and opportunity overlap.</span></article>
-        <article><b>2</b><span>Use source checks before scaling the recommendation into recurring reporting.</span></article>
-        <article><b>3</b><span>Convert the ranked queue into a stakeholder-ready operating digest.</span></article>
+
+    <section class="surface" id="quality" aria-labelledby="quality-title">
+      <div class="surface-header">
+        <div>
+          <p class="eyebrow">Data quality and client brief</p>
+          <h2 id="quality-title">Pipeline readiness before reporting</h2>
+        </div>
+        <p>Quality gates decide whether a result can move into reporting, needs engineering support, or should stay in analysis.</p>
+      </div>
+      <div class="split">
+        <section class="panel">
+          <div class="panel-title">
+            <h3>Source checks</h3>
+            <span id="qualityScore"></span>
+          </div>
+          <div id="qualityGrid" class="quality-grid"></div>
+        </section>
+        <section class="panel">
+          <h3>Stakeholder brief</h3>
+          <div id="briefs" class="note-stack"></div>
+        </section>
       </div>
     </section>
   </main>
+  <script src="src/app.js"></script>
 </body>
 </html>

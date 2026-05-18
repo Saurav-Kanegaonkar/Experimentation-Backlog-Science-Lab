@@ -2,14 +2,15 @@
 
 ## What I analyzed
 
-I joined 3,840 daily metric rows, 650 source events, and 180 action candidates for marketing experimentation science.
+I generated 36 structured marketing hypotheses, 18 completed experiment readouts, 168 source quality checks, and 3 stakeholder briefs.
 
 ## Findings
 
-- The highest-priority experiment is EXP016 with a priority score of 92.91.
-- The top queue combines 50.1 average risk with 80.6 quality score and $803,199 estimated impact.
-- The strongest use case is turning repeated stakeholder questions into a ranked operating digest.
+- The strongest next hypothesis is HYP-015 with a priority score of 40.0, a 16.2 percent expected lift, and a 9.3 percent minimum detectable effect.
+- 8 completed experiments meet the scale threshold using p-value, lift direction, and confidence interval checks.
+- The clearest statistical readout is EXP-001 with a 17.4 percent relative lift and p-value of 0.0.
+- Average pipeline readiness is 91.1, which means the data is usable for most readouts but still needs source-level QA before executive reporting.
 
 ## Recommendation
 
-Prioritize the top queue before scaling more dashboards. The project should help leaders decide which experiment risks need action, validation, or monitoring.
+Use the backlog score to choose the next tests, use the statistical readout to separate signal from noise, and use the quality surface to decide when engineering remediation is required before a client presentation.
